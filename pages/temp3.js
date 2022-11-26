@@ -29,9 +29,10 @@ export default function Temp3() {
   }
 
 function Kelvin({ value = 0 }){
-    return <div className="temp">{value + 273.15}K</div>
+    value = parseFloat(value);
+    return <div className="temp">{value + 273.15}K</div>;
   }
   
   function Fahrenheit({ value = 0}){
-    return <div className="temp">{(value * 9) / 5 + 32}°F</div>
+    return <div className="temp">{(value * 9) / 5 + 32}°F</div>;
   }

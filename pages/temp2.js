@@ -20,8 +20,9 @@ export default function Temp2() {
     );
 }
 
-function Kelvin({ value = 0 }){
-  return <div className="temp">{value + 273.15}K</div>
+function Kelvin({ value = 0.0}){
+  value = parseFloat(value);
+  return <div className="temp">{value +  273.15}K</div>
 }
 
 function Fahrenheit({ value = 0}){
